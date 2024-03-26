@@ -24,10 +24,6 @@
     overflow-x: scroll;
 }
 
-.explore-menu-list::-webkit-scrollbar {
-    display: none;
-
-}
 
 .explore-menu-list-item img {
     width: 7.5vw;
@@ -56,4 +52,11 @@
 .explore-menu-list-item .active {
     border: 3px solid tomato;
     padding: 2px;
+}
+
+@media (max-width: 1050px) {
+    .explore-menu-text {
+        max-width: 100%;
+        font-size: 14px;
+    }
 }

@@ -6,7 +6,7 @@ import { StoreContext } from '../../context/StroeContext';
 
 
 const Navbar = ({ setShowLogin }) => {
-    const { cartItems } = useContext(StoreContext)
+    const { cartItems, getTotalCart } = useContext(StoreContext)
     const [menu, setMenu] = useState("");
     return (
         <div className="navbar">
@@ -30,7 +30,7 @@ const Navbar = ({ setShowLogin }) => {
                     <Link to="/cart">
                         <img src={assets.basket_icon} />
                     </Link>
-                    {cartItems ? <div className="dot"></div> : null}
+                    {getTotalCart() ? <div className="dot"></div> : null}
                 </div>
                 <button onClick={() => setShowLogin(true)}>Sign In</button>
             </div>
